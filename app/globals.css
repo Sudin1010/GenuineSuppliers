@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-dark: #0b0f19;
+  --brand-card: #161f30;
+  --brand-red: #d62222;
+  --brand-muted: #94a3b8;
+  --brand-border: #1e2a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--brand-dark);
+  color: #fff;
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+.section-space {
+  @apply py-16 sm:py-20 lg:py-28;
+}
+
+.eyebrow {
+  @apply mb-4 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.32em] text-brand-red;
+}
+
+.eyebrow::before {
+  content: "";
+  @apply h-px w-8 bg-brand-red;
+}
+
+.display-title {
+  @apply font-display text-5xl uppercase leading-none tracking-[0.035em] text-white sm:text-6xl lg:text-7xl;
+}
+
+.surface-card {
+  @apply border border-brand-border bg-brand-card transition duration-300;
+}
+
+.surface-card:hover {
+  border-color: rgba(214, 34, 34, 0.7);
+  box-shadow: 0 20px 52px -26px rgba(214, 34, 34, 0.7);
+  transform: translateY(-4px);
+}
+
+.red-link {
+  @apply font-body text-sm uppercase tracking-[0.22em] text-brand-red underline-offset-4 transition-colors hover:text-brand-red-hover hover:underline;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-brand-red px-7 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-brand-red-hover;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center gap-2 border border-white/50 bg-transparent px-7 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:border-brand-red hover:text-brand-red-hover;
+}
+
+.input-field {
+  @apply w-full border border-brand-border bg-brand-card px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-brand-muted/60 focus:border-brand-red;
+}
+
+.grid-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.13) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.project-masonry {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .project-masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-masonry {
+    columns: 3;
+  }
+}
+
+.project-masonry > * {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseContact {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 11px rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+.animate-contact {
+  animation: pulseContact 2.6s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.12s;
+}
+
+.delay-2 {
+  animation-delay: 0.24s;
+}
+
+.delay-3 {
+  animation-delay: 0.36s;
+}
+
+.delay-4 {
+  animation-delay: 0.48s;
+}
