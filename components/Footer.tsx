@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const quickLinks = [
@@ -25,10 +26,19 @@ export function Footer() {
     <footer id="site-footer" className="border-t-2 border-brand-red bg-[#080B14] pb-24 pt-16 md:pb-12">
       <div className="container-shell grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/">
-            <span className="block font-display text-4xl tracking-[0.15em]">GENUINE</span>
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-red">
-              Suppliers & Builders
+          <Link href="/" className="flex items-center gap-4">
+            <Image
+              src="/images/logo/genuine-logo.png"
+              alt="Genuine Suppliers & Builders Pvt. Ltd."
+              width={112}
+              height={112}
+              className="h-28 w-28 rounded-full bg-[#d7d7d7] object-cover"
+            />
+            <span>
+              <span className="block font-display text-4xl tracking-[0.15em]">GENUINE</span>
+              <span className="block text-[10px] font-bold uppercase tracking-[0.3em] text-brand-red">
+                Suppliers & Builders
+              </span>
             </span>
           </Link>
           <p className="mt-6 max-w-xs text-sm leading-7 text-brand-muted">

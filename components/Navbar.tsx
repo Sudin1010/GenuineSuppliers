@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -36,12 +37,21 @@ export function Navbar() {
       }`}
     >
       <nav className="container-shell flex items-center justify-between">
-        <Link href="/" aria-label="Genuine Suppliers & Builders home">
-          <span className="block font-display text-3xl leading-none tracking-[0.15em] text-white">
-            GENUINE
-          </span>
-          <span className="block text-[9px] font-bold uppercase tracking-[0.33em] text-brand-red">
-            Suppliers & Builders
+        <Link href="/" aria-label="Genuine Suppliers & Builders home" className="flex items-center gap-3">
+          <Image
+            src="/images/logo/genuine-logo.png"
+            alt="Genuine Suppliers & Builders Pvt. Ltd."
+            width={72}
+            height={72}
+            className="h-14 w-14 rounded-full bg-[#d7d7d7] object-cover sm:h-16 sm:w-16"
+          />
+          <span className="hidden sm:block">
+            <span className="block font-display text-3xl leading-none tracking-[0.15em] text-white">
+              GENUINE
+            </span>
+            <span className="block text-[9px] font-bold uppercase tracking-[0.33em] text-brand-red">
+              Suppliers & Builders
+            </span>
           </span>
         </Link>
         <div className="hidden items-center gap-7 lg:flex">
