@@ -6,6 +6,7 @@ import { FloatingContact } from "@/components/FloatingContact";
 import { FloatingNav } from "@/components/FloatingNav";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const display = Bebas_Neue({
   subsets: ["latin"],
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
     "electric services Nepal",
     "genuine suppliers builders",
   ],
+  icons: {
+  icon: "/favicon.ico?v=123",
+  shortcut: "/favicon.ico",
+},
   openGraph: {
     title: "Genuine Suppliers & Builders Pvt. Ltd.",
     description: "Building Trust, Constructing Future - Lalitpur, Nepal",
@@ -88,6 +93,7 @@ export default function RootLayout({
         <Footer />
         <FloatingContact />
         <FloatingNav />
+        <Analytics />
       </body>
     </html>
   );
