@@ -50,13 +50,6 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
                 </div>
               ))}
             </div>
-            <div className="mt-10 flex gap-3">
-              {["Facebook", "Instagram", "WhatsApp"].map((social) => (
-                <a key={social} href="#" className="border border-brand-border px-4 py-3 text-xs uppercase tracking-widest text-brand-muted transition hover:border-brand-red hover:text-brand-red">
-                  {social}
-                </a>
-              ))}
-            </div>
           </div>
           <div id="contact-form">
           <ContactForm initialSubject={searchParams.subject} />       
@@ -67,7 +60,7 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
         <div className="overflow-hidden border border-brand-border bg-brand-card p-2">
           <iframe
             title="Bhainsepati, Lalitpur map"
-            src="https://maps.google.com/maps?q=27.6588,85.3247&z=15&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.086404902887!2d85.3049762!3d27.6527983!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb17003b4f6415%3A0xb23173d5f281588e!2sGenuine%20Suppliers%20%26%20Buillders%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1779682959068!5m2!1sen!2snp"
             className="h-[390px] w-full border-0 grayscale contrast-125 invert-[0.9]"
             loading="lazy"
           />
