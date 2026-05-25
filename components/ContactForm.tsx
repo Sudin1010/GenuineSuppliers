@@ -8,12 +8,37 @@ interface ContactFormProps {
   initialSubject?: string;
 }
 
+const whatsappNumber = "9779860484821";
+
 export function ContactForm({ initialSubject }: ContactFormProps) {
   const [sent, setSent] = useState(false);
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log("Contact inquiry submitted:", Object.fromEntries(new FormData(event.currentTarget)));
+    const form = event.currentTarget;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const values = Object.fromEntries(new FormData(form)) as Record<string, FormDataEntryValue>;
+    const message = [
+      "",
+      `Name: ${String(values.name)}`,
+      `Email: ${String(values.email)}`,
+      `Phone: ${String(values.phone)}`,
+      `Service: ${String(values.service)}`,
+      "",
+      "Message:",
+      String(values.message),
+    ].join("\n");
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
     setSent(true);
   }
 
@@ -21,9 +46,9 @@ export function ContactForm({ initialSubject }: ContactFormProps) {
     return (
       <div className="flex min-h-[470px] flex-col items-center justify-center border border-brand-border bg-brand-card p-8 text-center">
         <CheckCircle2 className="mb-6 h-12 w-12 text-brand-red" />
-        <h3 className="font-display text-5xl tracking-wide">Message Sent</h3>
+        <h3 className="font-display text-5xl tracking-wide">WhatsApp Ready</h3>
         <p className="mt-4 max-w-sm leading-7 text-brand-muted">
-          Thank you for reaching out. Our team will contact you shortly with the next steps.
+          Your inquiry has been prepared in WhatsApp. Press send there to share it with our team.
         </p>
         <button type="button" className="red-link mt-9" onClick={() => setSent(false)}>
           Send another message →
