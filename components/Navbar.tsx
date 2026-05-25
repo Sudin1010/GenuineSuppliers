@@ -72,7 +72,7 @@ export function Navbar() {
               </Link>
             );
           })}
-          <Link href="/contact" className="button-primary !px-5 !py-3">
+          <Link href="/contact?subject=Get%20Quote" className="button-primary !px-5 !py-3">
             Get Quote
           </Link>
         </div>
@@ -106,7 +106,7 @@ export function Navbar() {
             )}
           </Link>
         ))}
-        <Link href="/contact" className="button-primary mt-8 w-full">
+        <Link href="/contact?subject=Free%20Quote" className="button-primary mt-8 w-full">
           Get a Free Quote
         </Link>
       </div>
