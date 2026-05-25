@@ -58,7 +58,9 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
               ))}
             </div>
           </div>
-          <ContactForm initialSubject={searchParams.subject} />
+          <div id="contact-form">
+          <ContactForm initialSubject={searchParams.subject} />       
+         </div>
         </div>
       </section>
       <section className="container-shell pb-20 sm:pb-28">
