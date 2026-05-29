@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.genuinesuppliers.com/sitemap.xml",
+    sitemap: "https://www.genuinesuppliers.com.np/sitemap.xml",
   };
 }
