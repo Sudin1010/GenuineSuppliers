@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const root = "https://www.genuinesuppliers.com";
+  const root = "https://www.genuinesuppliers.com.np";
   const staticRoutes = ["", "/services", "/projects", "/amc", "/about", "/careers", "/contact"];
 
   return [
