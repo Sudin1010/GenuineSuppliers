@@ -4,7 +4,7 @@ import { SectionHero } from "@/components/SectionHero";
 
 export const metadata: Metadata = {
   title: "About Genuine Suppliers & Builders | Lalitpur, Nepal",
-  description: "About Genuine Suppliers & Builders - 10+ years delivering trusted building services in Nepal.",
+  description: "About Genuine Suppliers & Builders - 2+ years delivering trusted building services in Nepal.",
 };
 
 const values = [
