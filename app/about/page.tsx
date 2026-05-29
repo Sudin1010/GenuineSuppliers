@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BadgeCheck, Building2, HeartHandshake, Lightbulb, ShieldCheck, Target, UsersRound } from "lucide-react";
 import { SectionHero } from "@/components/SectionHero";
 
@@ -33,9 +34,9 @@ export default function AboutPage() {
         <div className="container-shell grid gap-12 lg:grid-cols-[380px_1fr] lg:items-center">
           <div className="grid grid-cols-2 gap-4">
             {[
-              ["500+", "Projects"],
+              ["200+", "Projects"],
               ["12+", "Services"],
-              ["10+", "Years"],
+              ["2+", "Years"],
               ["100%", "Commitment"],
             ].map(([number, label]) => (
               <div key={label} className="border border-brand-border bg-brand-card p-6">
@@ -62,9 +63,14 @@ export default function AboutPage() {
       </section>
       <section className="section-space border-y border-brand-border bg-brand-card/30">
         <div className="container-shell grid items-center gap-12 lg:grid-cols-[360px_1fr]">
-          <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-brand-card to-[#1a0505]">
-            <span className="font-display text-9xl tracking-wide text-brand-red">SB</span>
-          </div>
+          <div className="relative aspect-square overflow-hidden">
+  <Image
+    src="/images/saugat-basnet.jpeg"
+    alt="Saugat Basnet"
+    fill
+    className="object-cover"
+  />
+</div>
           <div>
             <p className="eyebrow">Leadership</p>
             <h2 className="font-display text-5xl tracking-wide">Saugat Basnet</h2>
