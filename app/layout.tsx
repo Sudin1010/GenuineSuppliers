@@ -20,7 +20,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.genuinesuppliers.com"),
+  metadataBase: new URL("https://www.genuinesuppliers.com.np"),
   title: "Genuine Suppliers & Builders Pvt. Ltd. | Lalitpur, Nepal",
   description:
     "Trusted construction and building services in Lalitpur, Nepal. Electric, plumbing, tiles, CCTV, AC, furniture and more. Call 9860484821.",
@@ -38,41 +38,118 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Genuine Suppliers & Builders Pvt. Ltd.",
     description: "Building Trust, Constructing Future - Lalitpur, Nepal",
-    url: "https://www.genuinesuppliers.com",
+    url: "https://www.genuinesuppliers.com.np",
     type: "website",
   },
 };
-
-const localBusiness = {
+ const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+
   name: "Genuine Suppliers & Builders Pvt. Ltd.",
+
+  image:
+    "https://genuinesuppliers.com.np/image/logo/genuine-logo.png",
+
+  url: "https://genuinesuppliers.com.np",
+
   telephone: "+977-9860484821",
+
   email: "suppliersg38@gmail.com",
+
+  description:
+    "Construction and building services in Lalitpur, Nepal including plumbing, electrical, CCTV, AC installation, furniture, tiles, painting and waterproofing.",
+
   address: {
     "@type": "PostalAddress",
     streetAddress: "Lalitpur Metropolitan-25, Bhainsepati",
     addressLocality: "Lalitpur",
+    addressRegion: "Bagmati",
+    postalCode: "44700",
     addressCountry: "NP",
   },
-  url: "https://www.genuinesuppliers.com",
-  description: "Construction and building services in Nepal",
+
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "27.65290",
+    longitude: "85.30907",
+  },
+
+  areaServed: {
+    "@type": "Country",
+    name: "Nepal",
+  },
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ], 
+   
+  priceRange: "$$",
+
+  sameAs: [
+    "https://www.instagram.com/suppliers__builders",
+    "https://www.tiktok.com/@genuine.suppliers",
+  ],
+
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Building Services",
+    name: "Construction Services",
+
     itemListElement: [
-      "Electric & Electronics",
-      "Plumbing",
-      "Tiles & Marble",
-      "Painting",
-      "CCTV Installation",
-      "AC Installation & Servicing",
-      "Furniture & Modular Kitchen",
-      "False Ceiling",
-      "Metal & Aluminium Work",
-      "Parqueting",
-      "Water Proofing",
-      "Microoven & Fridge Repair",
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Electric & Electronics",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Plumbing",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Tiles & Marble",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Painting",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "CCTV Installation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AC Installation & Servicing",
+        },
+      },
     ],
   },
 };
