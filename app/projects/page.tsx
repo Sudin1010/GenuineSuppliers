@@ -5,7 +5,7 @@ import { SectionHero } from "@/components/SectionHero";
 
 export const metadata: Metadata = {
   title: "Projects | Genuine Suppliers & Builders",
-  description: "500+ completed projects across Kathmandu Valley by Genuine Suppliers & Builders.",
+  description: "200+ completed projects across Kathmandu Valley by Genuine Suppliers & Builders.",
 };
 
 export default function ProjectsPage() {
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <SectionHero
         title="Our Projects"
         current="Projects"
-        subtitle="500+ completed projects across the Kathmandu Valley, from refined residences to high-performance commercial spaces."
+        subtitle="200+ completed projects across the Kathmandu Valley, from refined residences to high-performance commercial spaces."
       />
       <section className="border-b border-brand-border bg-brand-card">
         <div className="container-shell">
