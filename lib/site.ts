@@ -84,8 +84,8 @@ export const projectCategories = [
 ];
 
 export const stats = [
-  { value: 500, suffix: "+", label: "Projects" },
+  { value: 200, suffix: "+", label: "Projects" },
   { value: 12, suffix: "+", label: "Services" },
-  { value: 10, suffix: "+", label: "Years" },
+  { value: 2, suffix: "+", label: "Years" },
   { value: 100, suffix: "%", label: "Satisfaction" },
 ];
